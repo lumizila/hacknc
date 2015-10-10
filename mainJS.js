@@ -3,15 +3,22 @@ var count = 0;
 var attempts = 0;
 var score =0;
 var cell1, cell2, cell3, cell4;
-
+$(document).ready(function () {
+    $(document).on('click', 'td', function (e){
+        var optionsList = collectOptions();
+        for(i = 0; i < optionsList.length; i ++){
+            console.log(optionsList[i]);   
+        }
+    });
+});
 //cell1 = document.getElementById("one");
 //cell2 = document.getElementById("two");
 //cell3 = document.getElementById("three");
 //cell4 = document.getElementById("four");
 //cell1.addEventListener("click", test);
-function test(){
-    console.log("SUCESS");   
-}
+//function test(){
+//    console.log("SUCESS");   
+//}
 
 function collectOptions(){
     var options = new Array();
@@ -27,13 +34,11 @@ function collectOptions(){
             }
         }
         if(duplicate === false){
-            //console.log(id);
             ids[ids.length] = id;   
             
         }
     }
     for(i = 0; i < 4; i++){
-        console.log(ids[i]);
         options.push(animalList[ids[i]].name);   
     }
     return options;
