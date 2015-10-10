@@ -2,11 +2,15 @@ html#main {
     background-color: #008C8C;
     <!--#2680D0-->
     <!--#4D94D4-->
+    align-content: center;
+    text-align: center;
 }
 html#quiz {
     background-color: #B50000;
     <!--#E91600-->
     <!--#B51100-->
+    text-align: center;
+    align-content: center;
 }
 
 html#popup {
@@ -19,6 +23,8 @@ html#score {
     background-color: #FFF400;
     <!--#B5AD00-->
     <!--#E9DD00-->
+    align-content: center;
+    text-align: center;
 }
 
 nav {
