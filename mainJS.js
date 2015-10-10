@@ -18,7 +18,7 @@ $(document).ready(function () {
             cells.push(document.getElementById('3'));
             cells.push(document.getElementById('4'));
             for(i = 0; i < optionsList.length; i++){
-                cells[i].getAttribute('src').substr(7);
+                
                 var name = optionsList[i];
                 var srcs = new Array();
                 srcs.push("images/" + name + "/" + name + "1.jpg");
@@ -27,11 +27,11 @@ $(document).ready(function () {
                 console.log(srcs[0] + " " + srcs[1] + " " + srcs[2]);
                 var pictureId =  Math.floor(Math.random() * (3 - 0) + 0);
                 if(pictureId === 0){
-                    cells[0].src = "" + srcs[0] + "";
+                    cells[i].src = "" + srcs[0] + "";
                 }else if(pictureId === 1){
-                    cells[1].src = "" + srcs[1] + "";
+                    cells[i].src = "" + srcs[1] + "";
                 }else{
-                    cells[2].src = "" + srcs[2] + "";
+                    cells[i].src = "" + srcs[2] + "";
                 }
             }
         }
