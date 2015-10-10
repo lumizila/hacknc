@@ -1,10 +1,10 @@
 html#main {
-    background-color: #0971CF;
+    background-color: #008C8C;
     <!--#2680D0-->
     <!--#4D94D4-->
 }
 html#quiz {
-    background-color: #FF1800;
+    background-color: #B50000;
     <!--#E91600-->
     <!--#B51100-->
 }
@@ -22,20 +22,20 @@ html#score {
 }
 
 nav#main {
-    background-color: #2680D0;
-    margin: 0;
+    background-color: #00C9C9;
+    margin: auto;
     overflow: hidden;
 }
 
 nav#score {
-    background-color: #E91600;
-    margin: 0;
+    background-color: #FFF750;
+    margin: auto;
     overflow: hidden;
 }
 
 nav#quiz {
-    background-color: #4D94D4;
-    margin: 0;
+    background-color: #FF0000;
+    margin: auto;
     overflow: hidden;
 }
 
