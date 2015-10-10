@@ -11,14 +11,7 @@ $(document).ready(function () {
 //        }
 //    });
 });
-//cell1 = document.getElementById("one");
-//cell2 = document.getElementById("two");
-//cell3 = document.getElementById("three");
-//cell4 = document.getElementById("four");
-//cell1.addEventListener("click", test);
-//function test(){
-//    console.log("SUCESS");   
-//}
+
 
 function collectOptions(){                                      //Returns an array of 4 different animal options
     var options = new Array();
