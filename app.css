@@ -21,8 +21,20 @@ html#score {
     <!--#E9DD00-->
 }
 
-nav {
-    background-color: #333;
+nav#main {
+    background-color: #2680D0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav#score {
+    background-color: #E91600;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav#quiz {
+    background-color: #4D94D4;
     margin: 0;
     overflow: hidden;
 }
