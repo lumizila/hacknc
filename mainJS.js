@@ -75,7 +75,6 @@ $(document).ready(function () {
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
 		aux1 = res[0];
-		v
 		if(aux.indexOf(aux1) > -1 ){ // correct
 						update_display(aux, sound);
 		}
