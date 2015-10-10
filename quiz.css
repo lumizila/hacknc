@@ -1,7 +1,15 @@
-img {
-    display: block;
-    width: 25%;
-    height: 25%;
-    margin-left: 25%;
+table {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+}
 
+td {
+    height: 150px;
+    width: 150px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
 }
