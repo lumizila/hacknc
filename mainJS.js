@@ -1,5 +1,7 @@
 var animalList = [{name:"pig", id: 1}, {name:"cow", id: 2}, {name:"dog", id: 3}, {name:"cat", id:4}, {name:"duck", id: 5}, {name:"lion", id: 6}, {name: "monkey", id: 7} , {name:"chicken", id: 8}, {name:"elephant", id: 9}, {name:"bird", id:10}];
-
+var count = 0;
+var attempts = 0;
+var score =0;
 
 function collectOptions(){
     var options = new Array();
