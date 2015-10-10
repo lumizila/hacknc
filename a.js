@@ -1,5 +1,7 @@
 window.addEventListener("load", function() {
-	
+	var update_display = function (image_name) { 
+		
+	}
 	$("img#1").on('click', function() {
 	
 		var aux = document.getElementById('1').getAttribute('src');
