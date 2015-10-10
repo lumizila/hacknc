@@ -4,12 +4,12 @@ var attempts = 0;
 var score =0;
 var cell1, cell2, cell3, cell4;
 $(document).ready(function () {
-    $(document).on('click', 'td', function (e){
-        var optionsList = collectOptions();
-        for(i = 0; i < optionsList.length; i ++){
-            console.log(optionsList[i]);   
-        }
-    });
+//    $(document).on('click', 'td', function (e){
+//        var optionsList = collectOptions();
+//        for(i = 0; i < optionsList.length; i ++){
+//            console.log(optionsList[i]);   
+//        }
+//    });
 });
 //cell1 = document.getElementById("one");
 //cell2 = document.getElementById("two");
@@ -20,7 +20,7 @@ $(document).ready(function () {
 //    console.log("SUCESS");   
 //}
 
-function collectOptions(){
+function collectOptions(){                                      //Returns an array of 4 different animal options
     var options = new Array();
     var ids = [];
     
