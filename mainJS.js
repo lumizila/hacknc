@@ -2,7 +2,12 @@ var animalList = [{name:"pig", id: 1}, {name:"cow", id: 2}, {name:"dog", id: 3},
 var count = 0;
 var attempts = 0;
 var score =0;
+var cell1, cell2, cell3, cell4;
 
+cell1 = document.getElementById("one");
+cell2 = document.getElementById("two");
+cell3 = document.getElementById("three");
+cell4 = document.getElementById("four");
 function collectOptions(){
     var options = new Array();
     var ids = [];
