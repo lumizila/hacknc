@@ -18,9 +18,8 @@ $(document).ready(function () {
             cells.push(document.getElementById('3'));
             cells.push(document.getElementById('4'));
             for(i = 0; i < optionsList.length; i++){
-                var identifier = cells[i].getAttribute('src').substr(7;
+                var identifier = cells[i].getAttribute('src').substr(7);
                 var name = options[i];
-                
             }
         }
         count = count + 1;
