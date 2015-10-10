@@ -1,6 +1,5 @@
 window.addEventListener("load", function() {
 	var update_display = function (image_name, sound) {
-		alert(sound); 
 		var audio = new Audio(""+sound);
 		audio.play();
 	}
@@ -13,7 +12,6 @@ window.addEventListener("load", function() {
 		var res = aux1.split(".");
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
-			alert("clicked on image 1, its correct");
 			update_display(aux, sound);
 		}
 	});
@@ -26,7 +24,7 @@ window.addEventListener("load", function() {
 		var res = aux1.split(".");
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
-			alert("wow");
+									update_display(aux, sound);
 		}
 	});
 	
@@ -39,7 +37,7 @@ window.addEventListener("load", function() {
 		aux1 = res[0];
 
 		if(aux.indexOf(aux1) > -1 ){ // correct
-			alert("wow");
+						update_display(aux, sound);
 		}
 	});
 	
@@ -51,7 +49,7 @@ window.addEventListener("load", function() {
 		var res = aux1.split(".");
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ //correct
-			alert("wow");
+						update_display(aux, sound);
 		}
 	});
 
