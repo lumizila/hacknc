@@ -1,4 +1,5 @@
 var animalList = [{name:"pig", id: 1}, {name:"cow", id: 2}, {name:"dog", id: 3}, {name:"cat", id:4}, {name:"duck", id: 5}, {name:"lion", id: 6}, {name: "monkey", id: 7} , {name:"chicken", id: 8}, {name:"elephant", id: 9}, {name:"bird", id:10}];
+<<<<<<< HEAD
 var count = 0;
 var attempts = 0;
 var score =0;
@@ -12,8 +13,12 @@ $(document).ready(function () {
 //    });
 });
 
+=======
+>>>>>>> origin/master
 
-function collectOptions(){                                      //Returns an array of 4 different animal options
+
+var  THEOIRNVNO:RENH:IUHV:LR;
+function collectOptions(){
     var options = new Array();
     var ids = [];
     
@@ -27,11 +32,13 @@ function collectOptions(){                                      //Returns an arr
             }
         }
         if(duplicate === false){
+            //console.log(id);
             ids[ids.length] = id;   
             
         }
     }
     for(i = 0; i < 4; i++){
+        console.log(ids[i]);
         options.push(animalList[ids[i]].name);   
     }
     return options;
