@@ -79,9 +79,9 @@ $(document).ready(function () {
 		audio.play();
 	}
 	$("img#1").on('click', function() {
-	
+		var sounds = $("audio");
 		var aux = document.getElementById('1').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
+		var aux1 = sounds.attr("src");
 		var sound = aux1;
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
@@ -92,9 +92,9 @@ $(document).ready(function () {
 	});
 	
 	$("img#2").on('click', function() {
-	
+		var sounds = $("audio");
 		var aux = document.getElementById('2').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
+		var aux1 = sounds.attr("src");
 		var sound = aux1;
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
@@ -105,9 +105,9 @@ $(document).ready(function () {
 	});
 	
 	$("img#3").on('click', function() {
-	
+		var sounds = $("audio");
 		var aux = document.getElementById('3').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
+		var aux1 = sounds.attr("src");
 		var sound = aux1;
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
@@ -118,9 +118,9 @@ $(document).ready(function () {
 	});
 	
 	$("img#4").on('click', function() {
-	
+		var sounds = $("audio");
 		var aux = document.getElementById('4').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
+		var aux1 = sounds.attr("src");
 		var sound = aux1;
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
