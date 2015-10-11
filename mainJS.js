@@ -177,6 +177,41 @@ $(document).ready(function () {
 	});
 });
 
+function forceReset() {
+		$("h2").removeClass('dead');
+        var optionsList = collectOptions();
+            var cell1, cell2, cell3, cell4;
+            var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
+            var correctName = optionsList[correctId];    
+            var sound = $("audio");
+            source = "sounds/" + correctName + ".mp3";
+            console.log(source);
+            sound.attr('src', source);
+            sound.load();
+            cells.push(document.getElementById('1'));
+            cells.push(document.getElementById('2'));
+            cells.push(document.getElementById('3'));
+            cells.push(document.getElementById('4'));
+            for(i = 0; i < optionsList.length; i++){
+                
+                var name = optionsList[i];
+                var srcs = new Array();
+                srcs.push("images/" + name + "/" + name + "1.jpg");
+                srcs.push("images/" + name + "/" + name + "2.jpg");
+                srcs.push("images/" + name + "/" + name + "3.jpg");
+                console.log(srcs[0] + " " + srcs[1] + " " + srcs[2]);
+                var pictureId =  Math.floor(Math.random() * (3 - 0) + 0);
+                if(pictureId === 0){
+                    cells[i].src = "" + srcs[0] + "";
+                }else if(pictureId === 1){
+                    cells[i].src = "" + srcs[1] + "";
+                }else{
+                    cells[i].src = "" + srcs[2] + "";
+                }
+            }
+            count = count + 1;
+}
+
 function collectOptions(){
     var options = new Array();
     var ids = [];
