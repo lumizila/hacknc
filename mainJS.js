@@ -3,7 +3,7 @@ var animalList = [{name:"pig", id: 1}, {name:"cow", id: 2}, {name:"dog", id: 3},
 var counter = 0;
 
 var count = 0;
-var attempts = 0;
+var attempts;
 var score =0;
 var cells = [];
 var update_display = function (image_name, sound) {
@@ -14,12 +14,13 @@ $(document).ready(function () {
     $('#scoreboard').append('<p style = "display: inline;">'+counter+'</p>');
     
     $("#reset").on('click', function (e){
-		$("h2").removeClass('dead');
-        var optionsList = collectOptions();
+		    $("h2").removeClass('dead');
+            var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
             var correctName = optionsList[correctId];    
             var sound = $("audio");
+            attempts = 3;
             source = "sounds/" + correctName + ".mp3";
             console.log(source);
             sound.attr('src', source);
@@ -49,7 +50,7 @@ $(document).ready(function () {
     });
     $("#next").on('click', function (e){
         $("#next").addClass('dead');
-
+        attempts = 3;
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 5){
             
@@ -111,7 +112,12 @@ $(document).ready(function () {
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
 			update_display(aux, sound);
-		}
+		}else{
+            count--;
+            if(count === 0){
+                forceReset();
+            }
+        }
 	});
 	
 	$("img#2").on('click', function() {
@@ -124,7 +130,12 @@ $(document).ready(function () {
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
 									update_display(aux, sound);
-		}
+		}else{
+            count--;
+            if(count === 0){
+                forceReset();
+            }
+        }
 	});
 	
 	$("img#3").on('click', function() {
@@ -137,8 +148,12 @@ $(document).ready(function () {
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
 						update_display(aux, sound);
-
-		}
+		}else{
+            count--;
+            if(count === 0){
+                forceReset();
+            }
+        }
 	});
 	
 	$("img#4").on('click', function() {
@@ -153,6 +168,12 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ //correct
 						update_display(aux, sound);
 		}
+        else{
+            count--;
+            if(count === 0){
+                forceReset();
+            }
+        }
 	});
 });
 
