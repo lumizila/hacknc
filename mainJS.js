@@ -10,10 +10,11 @@ $(document).ready(function () {
             var cell1, cell2, cell3, cell4;
             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
             var correctName = optionsList[correctId];    
-            var sound = document.getElementById("sound");
+            var sound = $("audio");
             source = "sounds/" + correctName + ".mp3";
             console.log(source);
-            sound.src = "" + source + "";
+            sound.attr('src', source);
+            sound.load();
             cells.push(document.getElementById('1'));
             cells.push(document.getElementById('2'));
             cells.push(document.getElementById('3'));
