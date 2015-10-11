@@ -4,6 +4,10 @@ var count = 0;
 var attempts = 0;
 var score =0;
 var cells = [];
+var update_display = function (image_name, sound) {
+		var audio = new Audio(""+sound);
+		audio.play();
+}
 $(document).ready(function () {
     $("#reset").on('click', function (e){
         var optionsList = collectOptions();
@@ -130,7 +134,6 @@ $(document).ready(function () {
 		}
 	});
 });
-
 
 function collectOptions(){
     var options = new Array();
