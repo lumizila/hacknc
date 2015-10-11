@@ -5,7 +5,8 @@ var attempts = 0;
 var score =0;
 var cells = [];
 $(document).ready(function () {
-    $("#start").on('clickl', function (e){
+    $(document).on('load', function (e){
+        alert("TEST");
         var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             cells.push(document.getElementById('1'));
