@@ -54,6 +54,8 @@ $(document).ready(function () {
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 5){
             window.location.href = "score_page.html";
+            sessionStorage.setItem("Result", counter);
+            //console.log(sessionStorage.getItem("Result"));
         }else{
 
             var optionsList = collectOptions();
