@@ -216,4 +216,3 @@ function collectOptions(){
     }
     return options;
 }
-
