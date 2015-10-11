@@ -178,7 +178,9 @@ $(document).ready(function () {
 });
 
 function forceReset() {
+        if(count < 5){
 		$("h2").removeClass('dead');
+        attempts=3;
         var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
@@ -210,6 +212,7 @@ function forceReset() {
                 }
             }
             count = count + 1;
+        }
 }
 
 function collectOptions(){
