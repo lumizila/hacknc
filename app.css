@@ -145,10 +145,11 @@ button:active
 	animation: none;
 }
 
-button.dead
+.dead
 {
 	visibility: hidden;
 }
+
 a {
 color: black;
 }
