@@ -5,10 +5,17 @@ var attempts = 0;
 var score =0;
 var cells = [];
 $(document).ready(function () {
-    $(document).on('load', function (e){
+    $("#reset").on('click', function (e){
         alert("TEST");
         var optionsList = collectOptions();
+            
             var cell1, cell2, cell3, cell4;
+            var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
+            var correctName = optionsList[correctId];    
+            var sound = document.getElementById("sound");
+            source = "sounds/" + correctName + ".mp3";
+            console.log(source);
+            sound.src = "" + source + "";
             cells.push(document.getElementById('1'));
             cells.push(document.getElementById('2'));
             cells.push(document.getElementById('3'));
@@ -30,6 +37,7 @@ $(document).ready(function () {
                     cells[i].src = "" + srcs[2] + "";
                 }
             }
+            count = count + 1;
     });
     $("#next").on('click', function (e){
         //$("#next").addClass('dead');
@@ -37,6 +45,7 @@ $(document).ready(function () {
         if(count === 4){
             
         }else{
+            
             var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             cells.push(document.getElementById('1'));
