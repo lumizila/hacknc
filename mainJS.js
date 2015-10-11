@@ -1,5 +1,7 @@
 var animalList = [{name:"pig", id: 1}, {name:"cow", id: 2}, {name:"dog", id: 3}, {name:"cat", id:4}, {name:"duck", id: 5}, {name:"horse", id: 6}, {name: "monkey", id: 7} , {name:"chicken", id: 8}, {name:"elephant", id: 9}, {name:"bird", id:10}];
 
+var counter = 0;
+
 var count = 0;
 var attempts = 0;
 var score =0;
@@ -9,6 +11,8 @@ var update_display = function (image_name, sound) {
 		audio.play();
 }
 $(document).ready(function () {
+    $('#scoreboard').append('<p style = "display: inline;">'+counter+'</p>');
+    
     $("#reset").on('click', function (e){
 		$("h2").removeClass('dead');
         var optionsList = collectOptions();
@@ -89,6 +93,10 @@ $(document).ready(function () {
 		$("#next").removeClass('dead');
 		alert("correct");
 	//	audio.play();
+        counter+=20;
+        //$('#scoreboard').empty();
+        $('#scoreboard').empty();
+        $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');
 	}
 	$("img#1").on('click', function() {
 		var sounds = $("audio");
