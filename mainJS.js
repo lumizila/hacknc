@@ -53,7 +53,7 @@ $(document).ready(function () {
         attempts = 3;
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 5){
-            
+            window.location.href = "score_page.html";
         }else{
 
             var optionsList = collectOptions();
