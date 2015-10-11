@@ -67,8 +67,6 @@ $(document).ready(function () {
     var update_display = function (image_name, sound) {
 		var audio = new Audio(""+sound);
 		$("#next").removeClass('dead');
-		document.getElementById("#winimage").src=("images/cow2.jpeg");
-		$("#winimage").removeClass('dead');
 		audio.play();
 	}
 	$("img#1").on('click', function() {
