@@ -73,10 +73,10 @@ $(document).ready(function () {
         console.log(count);
     });
     var update_display = function (image_name, sound) {
-		var audio = new Audio(""+sound);
+	//	var audio = new Audio(""+sound);
 		$("#next").removeClass('dead');
 		alert("correct");
-		audio.play();
+	//	audio.play();
 	}
 	$("img#1").on('click', function() {
 		var sounds = $("audio");
