@@ -57,6 +57,13 @@ $(document).ready(function () {
 
             var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
+             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
+            var correctName = optionsList[correctId];    
+            var sound = $("audio");
+            source = "sounds/" + correctName + ".mp3";
+            console.log(source);
+            sound.attr('src', source);
+            sound.load();
             cells.push(document.getElementById('1'));
             cells.push(document.getElementById('2'));
             cells.push(document.getElementById('3'));
@@ -97,7 +104,7 @@ $(document).ready(function () {
     $("img#1").on('click', function() {
 		var sounds = $("audio");
 		var aux = document.getElementById('1').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
+		var aux1 = sounds.attr("src");
 		var sound = aux1;	
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
