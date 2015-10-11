@@ -43,7 +43,7 @@ $(document).ready(function () {
             count = count + 1;
     });
     $("#next").on('click', function (e){
-        //$("#next").addClass('dead');
+        $("#next").addClass('dead');
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 4){
             
