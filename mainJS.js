@@ -55,6 +55,9 @@ $(document).ready(function () {
         if(count === 5){
             window.location.href = "score_page.html";
             sessionStorage.setItem("Result", counter);
+            window.name = counter;
+            alert(counter);
+            alert(window.name);
             //console.log(sessionStorage.getItem("Result"));
         }else{
 
