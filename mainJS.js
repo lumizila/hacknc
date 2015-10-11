@@ -35,8 +35,9 @@ $(document).ready(function () {
                     cells[i].src = "" + srcs[2] + "";
                 }
             }
+            count = count + 1;
         }
-        count = count + 1;
+        console.log(count);
     });
     var update_display = function (image_name, sound) {
 		var audio = new Audio(""+sound);
