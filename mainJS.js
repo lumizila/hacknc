@@ -53,7 +53,7 @@ $(document).ready(function () {
         attempts = 3;
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 5){
-            
+            window.location.href = "score_page.html";
         }else{
 
             var optionsList = collectOptions();
@@ -92,15 +92,22 @@ $(document).ready(function () {
         console.log(count);
     });
     var update_display = function (image_name, sound) {
+
 		var randomized = Math.floor((Math.random() * 10) + 1); 
 		var audio = new Audio(randomized+".mp3");
+
+        //$('#scoreboard').empty();
+
+        if($('#next').hasClass('dead')){
+                counter+=(20+((attempts-3)*6));
+            $('#scoreboard').empty();
+            $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');    
+        
 		$("#next").removeClass('dead');
 		alert("correct");
+        }
 		audio.play();
-        counter+=20;
-        //$('#scoreboard').empty();
-        $('#scoreboard').empty();
-        $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');
+
 	}
 
     $("img#1").on('click', function() {
@@ -114,8 +121,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 			update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -132,8 +139,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 									update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -150,8 +157,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 						update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -170,8 +177,8 @@ $(document).ready(function () {
 						update_display(aux, sound);
 		}
         else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -179,7 +186,9 @@ $(document).ready(function () {
 });
 
 function forceReset() {
+        if(count < 5){
 		$("h2").removeClass('dead');
+        attempts=3;
         var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
@@ -211,6 +220,7 @@ function forceReset() {
                 }
             }
             count = count + 1;
+        }
 }
 
 function collectOptions(){
