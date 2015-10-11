@@ -7,6 +7,7 @@ var score =0;
 var cells = [];
 $(document).ready(function () {
     $("#next").on('click', function (e){
+        $("#next").addClass('dead');
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 4){
             
@@ -39,6 +40,7 @@ $(document).ready(function () {
     });
     var update_display = function (image_name, sound) {
 		var audio = new Audio(""+sound);
+		$("#next").removeClass('dead');
 		audio.play();
 	}
 	$("img#1").on('click', function() {
