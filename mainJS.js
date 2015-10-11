@@ -6,7 +6,6 @@ var score =0;
 var cells = [];
 $(document).ready(function () {
     $("#reset").on('click', function (e){
-        alert("TEST");
         var optionsList = collectOptions();
             
             var cell1, cell2, cell3, cell4;
