@@ -93,13 +93,18 @@ $(document).ready(function () {
     });
     var update_display = function (image_name, sound) {
 	//	var audio = new Audio(""+sound);
+        if($('#next').hasClass('dead')){
+                counter+=(20+((attempts-3)*6));
+            $('#scoreboard').empty();
+            $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');    
+        
 		$("#next").removeClass('dead');
 		alert("correct");
+        }
 	//	audio.play();
-        counter+=20;
-        //$('#scoreboard').empty();
+        /*counter+=(20+((attempts-3)*6));
         $('#scoreboard').empty();
-        $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');
+        $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');*/
 	}
 
     $("img#1").on('click', function() {
