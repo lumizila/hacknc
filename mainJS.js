@@ -7,7 +7,6 @@ var cells = [];
 $(document).ready(function () {
     $("#reset").on('click', function (e){
         var optionsList = collectOptions();
-            
             var cell1, cell2, cell3, cell4;
             var correctId =  Math.floor(Math.random() * (3 - 0) + 0);
             var correctName = optionsList[correctId];    
