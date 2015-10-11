@@ -50,16 +50,11 @@ $(document).ready(function () {
     $("#next").on('click', function (e){
         $("#next").addClass('dead');
 
-    $("#next").on('click', function (e){
->>>>>>> master
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
         if(count === 4){
             
         }else{
-<<<<<<< HEAD
-            
-=======
->>>>>>> master
+
             var optionsList = collectOptions();
             var cell1, cell2, cell3, cell4;
             cells.push(document.getElementById('1'));
@@ -67,7 +62,7 @@ $(document).ready(function () {
             cells.push(document.getElementById('3'));
             cells.push(document.getElementById('4'));
             for(i = 0; i < optionsList.length; i++){
-<<<<<<< HEAD
+
                 
                 var name = optionsList[i];
                 var srcs = new Array();
@@ -98,59 +93,40 @@ $(document).ready(function () {
         $('#scoreboard').empty();
         $('#scoreboard').append('<p style = "display: inline;">Score: '+counter+'</p>');
 	}
-	$("img#1").on('click', function() {
-		var sounds = $("audio");
-		var aux = document.getElementById('1').getAttribute('src');
-		var aux1 = sounds.attr("src");
-		var sound = aux1;
-=======
-                var identifier = cells[i].getAttribute('src');
-            }
-        }
-        count = count + 1;
-    });
+
     $("img#1").on('click', function() {
 	
 		var aux = document.getElementById('1').getAttribute('src');
 		var aux1 = document.getElementById('sound').getAttribute('src');
->>>>>>> master
+
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
-<<<<<<< HEAD
+
 			update_display(aux, sound);
-=======
 			alert("clicked on image 1, its correct");
->>>>>>> master
 		}
 	});
 	
 	$("img#2").on('click', function() {
-<<<<<<< HEAD
 		var sounds = $("audio");
 		var aux = document.getElementById('2').getAttribute('src');
 		var aux1 = sounds.attr("src");
 		var sound = aux1;
-=======
 	
 		var aux = document.getElementById('2').getAttribute('src');
 		var aux1 = document.getElementById('sound').getAttribute('src');
->>>>>>> master
 		aux1 = aux1.substr(7);
 		var res = aux1.split(".");
 		aux1 = res[0];
 		if(aux.indexOf(aux1) > -1 ){ // correct
-<<<<<<< HEAD
 									update_display(aux, sound);
-=======
 			alert("wow");
->>>>>>> master
 		}
 	});
 	
 	$("img#3").on('click', function() {
-<<<<<<< HEAD
 		var sounds = $("audio");
 		var aux = document.getElementById('3').getAttribute('src');
 		var aux1 = sounds.attr("src");
@@ -161,12 +137,6 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 						update_display(aux, sound);
 
-		var aux = document.getElementById('3').getAttribute('src');
-		var aux1 = document.getElementById('sound').getAttribute('src');
-		aux1 = aux1.substr(7);
-		var res = aux1.split(".");
-		aux1 = res[0];
-		if(aux.indexOf(aux1) > -1 ){ // correct
 			alert("wow");
 
 		}
