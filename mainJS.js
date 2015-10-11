@@ -92,10 +92,11 @@ $(document).ready(function () {
         console.log(count);
     });
     var update_display = function (image_name, sound) {
-	//	var audio = new Audio(""+sound);
+		var randomized = Math.floor((Math.random() * 10) + 1); 
+		var audio = new Audio(randomized+".mp3");
 		$("#next").removeClass('dead');
 		alert("correct");
-	//	audio.play();
+		audio.play();
         counter+=20;
         //$('#scoreboard').empty();
         $('#scoreboard').empty();
