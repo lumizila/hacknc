@@ -161,3 +161,25 @@ button:active
 a {
 color: black;
 }
+
+div#main {
+	background-color: #07247A;
+	background: -webkit-linear-gradient(#00C9C9, #07247A);
+	background: linear-gradient(#00C9C9, #07247A);
+    box-shadow: 0 1px 0 #07247A, 0 5px 0 #07247A, 0 6px 6px rgba(0,0,0,0.6);
+}
+
+div#quiz {
+	background-color: #B50000;
+	background: -webkit-linear-gradient(#FF0000, #B50000);
+	background: linear-gradient(#FF0000, #B50000);
+    box-shadow: 0 1px 0 #B50000, 0 5px 0 #B50000, 0 6px 6px rgba(0,0,0,0.6);
+}
+
+
+div#score {
+    	background-color: #B5A500;
+	background: -webkit-linear-gradient(#FFF750, #B5A500);
+	background: linear-gradient(#FFF750, #B5A500);
+    box-shadow: 0 1px 0 #B5A500, 0 5px 0 #B5A500, 0 6px 6px rgba(0,0,0,0.6);
+}
