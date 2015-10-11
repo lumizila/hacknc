@@ -51,7 +51,7 @@ $(document).ready(function () {
         $("#next").addClass('dead');
 
         var id =  Math.floor(Math.random() * (10 - 0) + 0);
-        if(count === 4){
+        if(count === 5){
             
         }else{
 
