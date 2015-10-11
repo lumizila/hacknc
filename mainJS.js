@@ -67,6 +67,7 @@ $(document).ready(function () {
     var update_display = function (image_name, sound) {
 		var audio = new Audio(""+sound);
 		$("#next").removeClass('dead');
+		alert("correct");
 		audio.play();
 	}
 	$("img#1").on('click', function() {
@@ -148,10 +149,4 @@ function collectOptions(){
     }
     return options;
 }
-function popUp(inputAnswer){
-    if(answer === "correct"){
-        alert("CORRECT, GREAT JOB");   
-    }else{
-        alert("OOPS, TRY AGAIN");  
-    }
-}
+
