@@ -39,6 +39,14 @@ nav#main {
     overflow: hidden;
 }
 
+div {
+    margin-left: 44%;
+    background: linear-gradient(#00C9C9, #07247A);
+    height: 45px;
+    width: 175px;
+
+}
+
 nav#score {
     background-color: #FFF750;
     margin: auto;
