@@ -113,8 +113,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 			update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -131,8 +131,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 									update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -149,8 +149,8 @@ $(document).ready(function () {
 		if(aux.indexOf(aux1) > -1 ){ // correct
 						update_display(aux, sound);
 		}else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
@@ -169,8 +169,8 @@ $(document).ready(function () {
 						update_display(aux, sound);
 		}
         else{
-            count--;
-            if(count === 0){
+            attempts--;
+            if(attempts === 0){
                 forceReset();
             }
         }
